@@ -2,6 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Mario's Portfolio`,
     // NEED TO UPDATE TO ACTUAL LINK
+    author: `Mario Ballesteros`,
     siteUrl: `https://www.soontobemyportfolio.com`,
     description: `my portfolio :)`,
   },
@@ -34,4 +35,4 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-}
+};

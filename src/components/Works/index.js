@@ -13,14 +13,14 @@ const Works = () => (
         <h1>Work</h1>
         <p>Selected web, mobile, video projects...</p>
         <WorksContainer>
-          <WorkItens />
+          <WorkItems />
         </WorksContainer>
       </Content>
     </Wrapper>
   </>
 );
 
-const WorkItens = () => {
+const WorkItems = () => {
   const data = useStaticQuery(graphql`
     {
       allFile(filter: { relativeDirectory: { eq: "works" } }) {
@@ -28,7 +28,7 @@ const WorkItens = () => {
           node {
             childImageSharp {
               id
-              fluid(maxWidth: 1000, quality: 100) {
+              fluid(maxWidth: 200, quality: 100) {
                 ...GatsbyImageSharpFluid
               }
             }
@@ -45,8 +45,9 @@ const WorkItens = () => {
           href="https://unsplash.com/"
           target="_blank"
           rel="noopener noreferrer"
+          key={key}
         >
-          <WorkImage key={key} fluid={image.node.childImageSharp.fluid} />
+          <WorkImage fluid={image.node.childImageSharp.fluid} />
         </a>
       ))}
     </WorkItem>

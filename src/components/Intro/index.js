@@ -12,12 +12,8 @@ const Intro = () => (
       <IntroContainer>
         <header>
           <h1>
-            Hello my name is{' '}
-            <b>
-              {' '}
-              <br />
-              John Doe
-            </b>
+            Hello my name is
+            <b className="header-name">Mario Ballesteros</b>
           </h1>
           <h3>web dev stuffs</h3>
         </header>
@@ -31,7 +27,7 @@ const Image = () => {
     query {
       placeholderImage: file(relativePath: { eq: "intro/photo2.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 386) {
+          fluid(maxWidth: 386, quality: 100) {
             ...GatsbyImageSharpFluid_noBase64
           }
         }

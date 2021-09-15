@@ -74,6 +74,7 @@ export const IntroContainer = styled.div`
     color: var(--gray8);
     b {
       color: var(--mainColor);
+      display: block;
     }
   }
 

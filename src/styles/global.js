@@ -1,6 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
 import media from 'styled-media-query';
-import bg from '../images/bg.jpg';
 
 const GlobalStyles = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap');

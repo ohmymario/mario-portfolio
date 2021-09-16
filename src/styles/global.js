@@ -3,7 +3,11 @@ import media from 'styled-media-query';
 import { normalize } from 'styled-normalize';
 
 const GlobalStyles = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap');
+  /* everything else */
+  /* roboto 400, 700, 900 */
+
+  /* nav links */
+  /* Rubik 400,700,900 */
 
   ${normalize}
 

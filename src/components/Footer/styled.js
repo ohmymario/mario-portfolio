@@ -2,19 +2,39 @@ import styled from 'styled-components';
 
 export const FooterWrapper = styled.div`
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1vw;
+  flex-direction: column;
   margin: 40px auto;
-  color: var(--gray4);
-  font-size: 12px;
-  letter-spacing: 0.2px;
 
-  a {
-    font-weight: normal;
-    text-decoration: underline;
-    &:hover {
-      color: var(--gray1);
+  .attribution {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5vw;
+    margin-bottom: 10px;
+    color: var(--gray4);
+    font-size: 12px;
+    letter-spacing: 0.2px;
+    a {
+      font-weight: normal;
+      text-decoration: underline;
+      &:hover {
+        color: var(--gray1);
+      }
+    }
+  }
+  .footer-socials {
+    color: var(--gray1);
+    display: flex;
+    gap: 1vw;
+    align-items: center;
+    justify-content: center;
+    a {
+      &:hover {
+        color: var(--gray4);
+      }
+    }
+    * {
+      font-size: 1.75rem;
     }
   }
 `;

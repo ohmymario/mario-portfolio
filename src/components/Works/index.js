@@ -10,8 +10,8 @@ const Works = () => (
   <>
     <Wrapper>
       <Content>
-        <h1>Work</h1>
-        <p>Selected web, mobile, video projects...</p>
+        <h1>My Works</h1>
+        <p>various projects i've completed</p>
         <WorksContainer>
           <WorkItems />
         </WorksContainer>
@@ -40,13 +40,14 @@ const WorkItems = () => {
 
   return (
     <WorkItem>
-      {data.allFile.edges.map((image, key) => (
+      {data.allFile.edges.map((image, index, key) => (
         <a
           href="https://unsplash.com/"
           target="_blank"
           rel="noopener noreferrer"
           key={key}
         >
+          {index}
           <WorkImage fluid={image.node.childImageSharp.fluid} />
         </a>
       ))}

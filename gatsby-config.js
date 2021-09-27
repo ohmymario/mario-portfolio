@@ -9,7 +9,8 @@ module.exports = {
   plugins: [
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
-    'gatsby-plugin-transition-link',
+    `gatsby-plugin-fontawesome-css`,
+    `gatsby-plugin-transition-link`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {

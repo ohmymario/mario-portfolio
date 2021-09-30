@@ -5,12 +5,12 @@ export const DivWrapper = styled.div`
   background: #fff;
   width: auto;
   display: flex;
-  width: 1000px;
+  width: 1250px;
   flex-direction: row;
   padding: 48px;
 
   ${media.lessThan('large')`
-        width: calc(100% - 300px);
+        width: calc(100% - 200px);
         flex-direction: column;
         padding: 36px;
     `}

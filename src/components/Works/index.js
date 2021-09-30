@@ -3,6 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 
 import Content from '../Common/Content';
 import Wrapper from '../Common/Wrapper';
+import portfolioData from './worksData';
 
 import { WorksContainer, WorkItem, WorkImage } from './styled';
 
@@ -11,7 +12,7 @@ const Works = () => (
     <Wrapper>
       <Content>
         <h1>My Works</h1>
-        <p>various projects i've completed</p>
+        <p>various projects i've made</p>
         <WorksContainer>
           <WorkItems />
         </WorksContainer>
@@ -28,7 +29,7 @@ const WorkItems = () => {
           node {
             childImageSharp {
               id
-              fluid(maxWidth: 200, quality: 100) {
+              fluid(maxWidth: 500, quality: 100) {
                 ...GatsbyImageSharpFluid
               }
             }
@@ -40,15 +41,17 @@ const WorkItems = () => {
 
   return (
     <WorkItem>
-      {data.allFile.edges.map((image, index, key) => (
+      {data.allFile.edges.map((image, i) => (
         <a
-          href="https://unsplash.com/"
+          href={portfolioData[i].url}
           target="_blank"
           rel="noopener noreferrer"
-          key={key}
+          key={i}
         >
-          {index}
-          <WorkImage fluid={image.node.childImageSharp.fluid} />
+          <WorkImage
+            imgStyle={{ objectPosition: 'top' }}
+            fluid={image.node.childImageSharp.fluid}
+          />
         </a>
       ))}
     </WorkItem>

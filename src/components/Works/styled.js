@@ -11,22 +11,23 @@ export const WorkItem = styled.div`
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  margin-left: -12px;
-  margin-right: -12px;
+  gap: 10px;
 
   a {
-    width: 25%;
-    padding-left: 12px;
-    padding-right: 12px;
-    padding-bottom: 12px;
-    max-height: 150px;
+    width: calc(33.3333% - 20px);
+    border: 1px solid var(--gray5);
+    max-height: 200px;
+
+    ${media.lessThan('large')`
+            width: calc(50% - 10px);
+        `}
 
     ${media.lessThan('medium')`
-            width: 33.3333%;
+            width: 100%;
         `}
 
     ${media.lessThan('small')`
-            width: 50%;
+            width: 100%;
         `}
   }
 `;

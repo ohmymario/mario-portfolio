@@ -34,17 +34,24 @@ const WorkItems = () => {
           .match(/\d/g, '')[0];
 
         return (
-          <a
-            href={portfolioData[num - 1].url}
-            target="_blank"
-            rel="noopener noreferrer"
-            key={i}
-          >
-            <WorkImage
-              imgStyle={{ objectPosition: 'top' }}
-              fluid={image.node.childImageSharp.fluid}
-            />
-          </a>
+          <div className="work-container">
+            <a
+              href={portfolioData[num - 1].url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="work-link"
+              key={i}
+            >
+              <WorkImage
+                imgStyle={{ objectPosition: 'top' }}
+                fluid={image.node.childImageSharp.fluid}
+              />
+            </a>
+            <div className="work-desc">
+              <h3>{portfolioData[num - 1].name}</h3>
+              <p>{portfolioData[num - 1].tech}</p>
+            </div>
+          </div>
         );
       })}
     </WorkItem>

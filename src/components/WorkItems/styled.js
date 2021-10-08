@@ -31,18 +31,22 @@ export const WorkItem = styled.div`
       &:after {
         position: absolute;
         content: '';
-        background: rgba(0, 0, 0, 0.5);
+        background: rgba(0, 0, 0, 0.75);
         z-index: 999;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
         opacity: 0;
-        transition: all 0.5s;
+        transition: all 0.35s;
       }
     }
 
     .work-desc {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
       position: absolute;
       top: 0;
       left: 0;
@@ -50,8 +54,28 @@ export const WorkItem = styled.div`
       bottom: 0;
       opacity: 0;
       z-index: 999;
-      transition: all 0.3s ease-out;
+      padding: 15px 15px 15px 15px;
+      transition: all 0.35s;
       pointer-events: none;
+      color: white;
+
+      h3 {
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: normal;
+        justify-content: center;
+      }
+
+      p {
+        font-size: 0.85rem;
+      }
+
+      h3,
+      p {
+        margin: 0;
+        text-align: center;
+        color: white;
+      }
     }
 
     &:hover .work-desc {
@@ -60,7 +84,11 @@ export const WorkItem = styled.div`
 
     &:hover a:after {
       opacity: 1;
-      background-image: linear-gradient(to top, #ca5f5e, #d68584);
+      background-image: linear-gradient(rgba(0, 0, 0, 0.75));
+    }
+
+    &:hover img {
+      filter: blur(1px);
     }
   }
 `;

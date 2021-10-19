@@ -61,8 +61,9 @@ export const WorkItem = styled.div`
 
       h3 {
         text-align: center;
-        font-size: 1.5rem;
+        letter-spacing: 0.5px;
         font-weight: normal;
+        font-size: 1.5rem;
         justify-content: center;
       }
 

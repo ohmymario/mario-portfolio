@@ -29,16 +29,17 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
+    const body = encode({
+      'form-name': form.getAttribute('name'),
+      name,
+      email,
+      message,
+      bot,
+    });
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({
-        'form-name': form.getAttribute('name'),
-        ...name,
-        ...email,
-        ...message,
-        ...bot,
-      }),
+      body,
     })
       .then(() => {
         resetForm();

@@ -16,6 +16,7 @@ function encode(data) {
 const Contact = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
+  const [subject, setSubject] = useState('');
   const [message, setMessage] = useState('');
   const [bot, setBot] = useState();
 
@@ -72,12 +73,13 @@ const Contact = () => {
                   </a>
                 </p>
                 <p className="contact-link">
-                  If you would rather email{' '}
+                  Or email me{' '}
                   <a href="mailto:mariob360@gmail.com">mariob360@gmail.com</a>
                 </p>
               </div>
 
               <form
+                className="contact-form"
                 name="contact"
                 method="post"
                 action="/thanks/"
@@ -102,8 +104,9 @@ const Contact = () => {
 
                 <p className="form-name">
                   <label htmlFor="name">
-                    Your Name:{' '}
+                    {/* Your Name:{' '} */}
                     <input
+                      placeholder="Name"
                       onChange={(e) => setName(e.target.value)}
                       value={name}
                       name="name"
@@ -115,8 +118,9 @@ const Contact = () => {
 
                 <p className="form-email">
                   <label htmlFor="email">
-                    Your Email:{' '}
+                    {/* Your Email:{' '} */}
                     <input
+                      placeholder="Email"
                       onChange={(e) => setEmail(e.target.value)}
                       value={email}
                       name="email"
@@ -125,10 +129,24 @@ const Contact = () => {
                   </label>
                 </p>
 
+                <p className="form-subject">
+                  <label htmlFor="subject">
+                    {/* Subject:{' '} */}
+                    <input
+                      placeholder="Subject"
+                      onChange={(e) => setSubject(e.target.value)}
+                      value={subject}
+                      name="subject"
+                      required
+                    />
+                  </label>
+                </p>
+
                 <p className="form-message">
                   <label htmlFor="message">
-                    Message:{' '}
+                    {/* Message:{' '} */}
                     <textarea
+                      placeholder="Message"
                       onChange={(e) => setMessage(e.target.value)}
                       value={message}
                       name="message"

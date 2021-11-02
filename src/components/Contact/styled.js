@@ -15,7 +15,7 @@ export const InfosWrapper = styled.div`
   flex-basis: 70%;
 
   ${media.lessThan('medium')`
-        flex-basis: auto;
+  flex-basis: auto;
   `}
 
   .contact-message {
@@ -32,6 +32,7 @@ export const InfosWrapper = styled.div`
   }
 
   .contact-links {
+    margin-bottom: 20px;
     .contact-link {
       margin-bottom: 10px;
       margin-top: 5px;
@@ -43,6 +44,53 @@ export const InfosWrapper = styled.div`
           color: var(--gray8);
         }
       }
+    }
+  }
+
+  .contact-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    > * {
+      border: 1px solid gray;
+    }
+
+    p {
+      margin: 0;
+      padding: 0;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      border: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    input {
+      padding: 5px 10px;
+    }
+
+    textarea {
+      padding: 10px;
+      min-height: 150px;
+    }
+
+    .form-name {
+      flex-basis: calc(50% - 10px);
+    }
+    .form-email {
+      flex-basis: calc(50% - 10px);
+    }
+    .form-subject {
+      width: 100%;
+    }
+    .form-message {
+      width: 100%;
     }
   }
 `;

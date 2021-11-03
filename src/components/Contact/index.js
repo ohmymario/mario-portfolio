@@ -59,9 +59,12 @@ const Contact = () => {
               <div className="contact-message">
                 <h1>Let's Talk</h1>
                 <p>
-                  Let's get in touch, for any job opportunities or even simply
+                  {/* Let's get in touch, for any job opportunities or even simply
                   say hi, if you are feeling really adventurous, just drop me a
-                  line.
+                  line. */}
+                  If you would like to chat, I'm currently open for job
+                  opportunities or to just have a chat. Easiest way is to send
+                  me a message using the form below.
                 </p>
               </div>
 
@@ -155,9 +158,9 @@ const Contact = () => {
                   </label>
                 </p>
 
-                <p className="form-submit">
-                  <button type="submit">Send</button>
-                </p>
+                <button className="form-submit" type="submit">
+                  Send Message
+                </button>
               </form>
             </InfosWrapper>
             <ImageWrapper>

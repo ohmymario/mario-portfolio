@@ -52,10 +52,6 @@ export const InfosWrapper = styled.div`
     flex-wrap: wrap;
     gap: 20px;
 
-    > * {
-      border: 1px solid gray;
-    }
-
     p {
       margin: 0;
       padding: 0;
@@ -69,6 +65,9 @@ export const InfosWrapper = styled.div`
       border: 0;
       width: 100%;
       height: 100%;
+      border: 1px solid var(--gray4);
+      border-radius: 2px;
+      background: var(--gray3);
     }
 
     input {
@@ -82,15 +81,49 @@ export const InfosWrapper = styled.div`
 
     .form-name {
       flex-basis: calc(50% - 10px);
+      ${media.lessThan('medium')`
+        flex-basis: 100%;
+      `}
     }
     .form-email {
       flex-basis: calc(50% - 10px);
+      ${media.lessThan('medium')`
+        flex-basis: 100%;
+      `}
     }
     .form-subject {
       width: 100%;
     }
     .form-message {
       width: 100%;
+    }
+
+    .form-submit {
+      border: none;
+      font-size: 20px;
+      color: var(--gray7);
+      padding: 7px 15px;
+      margin-left: auto;
+      background: var(--gray3);
+      border: 1px solid var(--gray4);
+      border-radius: 2px;
+      cursor: pointer;
+      transition: all 0.25s;
+
+      &:hover {
+        color: var(--gray8);
+        background: var(--gray4);
+        border: 1px solid var(--gray5);
+      }
+
+      ${media.lessThan('large')`
+        padding: 7px 25px;
+        margin: 0 auto;
+      `}
+
+      ${media.lessThan('medium')`
+        flex-basis: 100%;
+      `}
     }
   }
 `;

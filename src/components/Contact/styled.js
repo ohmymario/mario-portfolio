@@ -52,6 +52,10 @@ export const InfosWrapper = styled.div`
     flex-wrap: wrap;
     gap: 20px;
 
+    ${media.lessThan('medium')`
+      margin-bottom: 20px;
+    `}
+
     p {
       margin: 0;
       padding: 0;

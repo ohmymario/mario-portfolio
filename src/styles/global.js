@@ -24,7 +24,8 @@ const GlobalStyles = createGlobalStyle`
     font-family: 'Roboto', sans-serif;
     --textColor: #4a5568;
     --textSecondColor: #858d95;
-    --mainColor: #5A67D8;
+    --mainColorValue: 90, 103, 216;
+    --mainColor: rgb(var(--mainColorValue));
     --gray1: #f7fafc;
     --gray2: #edf2f7;
     --gray3: #e2e8f0;

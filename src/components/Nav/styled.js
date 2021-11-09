@@ -1,9 +1,6 @@
 import styled from 'styled-components';
 import media from 'styled-media-query';
 
-// add margin to all but last item - 48px then 18px
-// add padding to entire ul wrapper - 40px then 25px
-
 export const Wrapper = styled.nav`
   ul {
     position: relative;
@@ -53,8 +50,3 @@ export const Wrapper = styled.nav`
 
     `}
 `;
-
-// border-color: #66afe9;
-//     outline: 0;
-//     -webkit-box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%), 0 0 8px rgb(102 175 233 / 60%);
-//     box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%), 0 0 8px rgb(102 175 233 / 60%);

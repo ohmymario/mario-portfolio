@@ -72,6 +72,18 @@ export const InfosWrapper = styled.div`
       border: 1px solid var(--gray4);
       border-radius: 2px;
       background: var(--gray3);
+      transition: all 0.3s ease;
+
+      &:focus {
+        border-color: var(--mainColor);
+        outline: 0;
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08),
+          0 0 8px rgba(var(--mainColorValue), 0.6);
+      }
+
+      &:hover {
+        border-color: rgba(var(--mainColorValue), 0.5);
+      }
     }
 
     input {

@@ -20,7 +20,7 @@ export const Wrapper = styled.nav`
       font-weight: 700;
 
       &:hover {
-        color: var(--gray10);
+          color: var(--mainColor);
       }
 
       svg {

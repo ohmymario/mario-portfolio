@@ -22,6 +22,7 @@ export const Wrapper = styled.nav`
         font-weight: 700;
         text-decoration: none;
         color: var(--bg-white);
+        transition: color 0.25s;
 
         &:hover {
           color: var(--mainColor);

@@ -37,6 +37,7 @@ const Contact = () => {
       'form-name': form.getAttribute('name'),
       name,
       email,
+      subject,
       message,
       bot,
     });

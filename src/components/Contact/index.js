@@ -20,9 +20,12 @@ const Contact = () => {
   const [message, setMessage] = useState('');
   const [bot, setBot] = useState();
 
+  const [submitMessage, setSubmitMessage] = useState('Send Message');
+
   const resetForm = () => {
     setName('');
     setEmail('');
+    setSubject('');
     setMessage('');
     setBot();
   };
@@ -37,15 +40,34 @@ const Contact = () => {
       message,
       bot,
     });
+
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body,
     })
-      .then(() => {
+      .then((res) => {
+        console.log(res);
+        setSubmitMessage('Sending Message...');
+        if (res.status === 200) {
+          setSubmitMessage('Message Sent ✉');
+        } else {
+          setSubmitMessage('Something went wrong');
+          throw new Error('Something went wrong');
+        }
+
+        setTimeout(function () {
+          setSubmitMessage('Send Message');
+        }, 3000);
+
         resetForm();
       })
-      .catch((error) => alert(error));
+      .catch((error) => {
+        alert(error);
+        setTimeout(function () {
+          setSubmitMessage('Send Message');
+        }, 2000);
+      });
   };
 
   // .then(() => navigate(form.getAttribute('action')))
@@ -159,7 +181,7 @@ const Contact = () => {
                 </p>
 
                 <button className="form-submit" type="submit">
-                  Send Message
+                  {submitMessage}
                 </button>
               </form>
             </InfosWrapper>

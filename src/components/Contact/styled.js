@@ -52,6 +52,8 @@ export const InfosWrapper = styled.div`
     flex-wrap: wrap;
     gap: 20px;
 
+    opacity: ${(props) => props.submit && '0.45'};
+
     ${media.lessThan('medium')`
       margin-bottom: 20px;
     `}
@@ -123,7 +125,7 @@ export const InfosWrapper = styled.div`
       background: var(--gray3);
       border: 1px solid var(--gray4);
       border-radius: 2px;
-      cursor: pointer;
+      cursor: ${(props) => (props.submit ? 'not-allowed' : 'pointer')};
       transition: all 0.25s;
 
       &:hover {

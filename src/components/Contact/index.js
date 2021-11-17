@@ -21,6 +21,7 @@ const Contact = () => {
   const [bot, setBot] = useState();
 
   const [submitMessage, setSubmitMessage] = useState('Send Message');
+  const [submit, setSubmit] = useState(false);
 
   const resetForm = () => {
     setName('');
@@ -48,8 +49,7 @@ const Contact = () => {
       body,
     })
       .then((res) => {
-        console.log(res);
-        setSubmitMessage('Sending Message...');
+        setSubmit(true);
         if (res.status === 200) {
           setSubmitMessage('Message Sent ✉');
         } else {
@@ -59,6 +59,7 @@ const Contact = () => {
 
         setTimeout(function () {
           setSubmitMessage('Send Message');
+          setSubmit(false);
         }, 3000);
 
         resetForm();
@@ -67,6 +68,7 @@ const Contact = () => {
         alert(error);
         setTimeout(function () {
           setSubmitMessage('Send Message');
+          setSubmit(false);
         }, 2000);
       });
   };
@@ -78,7 +80,7 @@ const Contact = () => {
       <Wrapper>
         <Content>
           <ContactWrapper>
-            <InfosWrapper>
+            <InfosWrapper submit={submit}>
               <div className="contact-message">
                 <h1>Let's Talk</h1>
                 <p>

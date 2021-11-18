@@ -60,7 +60,7 @@ const Contact = () => {
         setTimeout(function () {
           setSubmitMessage('Send Message');
           setSubmit(false);
-        }, 3000);
+        }, 2500);
 
         resetForm();
       })

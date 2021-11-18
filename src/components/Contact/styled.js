@@ -126,6 +126,7 @@ export const InfosWrapper = styled.div`
       border: 1px solid var(--gray4);
       border-radius: 2px;
       cursor: ${(props) => (props.submit ? 'not-allowed' : 'pointer')};
+      pointer-events: ${(props) => props.submit && 'none'};
       transition: all 0.25s;
 
       &:hover {

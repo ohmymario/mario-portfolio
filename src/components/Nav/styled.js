@@ -25,7 +25,15 @@ export const Wrapper = styled.nav`
         font-weight: 700;
         text-decoration: none;
         color: var(--bg-white);
-        transition: color 0.25s;
+        transition: all 0.25s;
+
+        &[aria-current] {
+          color: var(--mainColor);
+          filter: brightness(120%);
+          &:hover {
+            filter: brightness(100%);
+          }
+        }
 
         &:hover {
           color: var(--mainColor);

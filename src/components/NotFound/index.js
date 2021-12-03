@@ -11,6 +11,7 @@ const NotFound = () => (
     <ImageContainer>
       <Image />
     </ImageContainer>
+    <h1>Oh no!</h1>
     <h2>
       Looks like there's nothing here. Let's go back{' '}
       <AniLink paintDrip hex="#5A67D8" to="/">

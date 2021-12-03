@@ -28,19 +28,35 @@ export const ImageContainer = styled.div`
 `;
 
 export const NotFoundWrapper = styled.div`
+  color: var(--gray7);
   font-weight: 300;
   line-height: 1.2;
   text-align: center;
+  padding: 20px 0 20px 0;
   ${media.lessThan('medium')`
-    color: var(--gray7);
     font-size: 1rem;
   `}
-  h2 {
-    font-weight: inherit;
-    margin-bottom: 0%;
+
+  h1 {
+    font-size: 4.5rem;
+    margin-bottom: 20px;
+    color: var(--gray8);
+    ${media.lessThan('medium')`
+      font-size: 2.75rem;
+      margin-bottom: 10px;
+    `}
   }
-  a {
+
+  h2 {
+    margin: 0;
     font-weight: inherit;
+  }
+
+  a {
     text-decoration: underline;
+    transition: color 0.2s;
+    &:hover {
+      color: var(--mainColor);
+    }
   }
 `;

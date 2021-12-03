@@ -88,8 +88,8 @@ const Contact = () => {
                   say hi, if you are feeling really adventurous, just drop me a
                   line. */}
                   If you would like to chat, I'm currently open for job
-                  opportunities or to just have a chat. Easiest way is to send
-                  me a message using the form below.
+                  opportunities. Easiest way is to send me a message using the
+                  form below.
                 </p>
               </div>
 

@@ -38,6 +38,7 @@ const GlobalStyles = createGlobalStyle`
     --gray10: #1D2B3D;
     --bg-black: #000;
     --bg-white: #fff;
+    --link-speed: all 0.25s;
     font-size: 18px;
     line-height: 28px;
   }

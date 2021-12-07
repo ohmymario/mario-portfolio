@@ -39,7 +39,8 @@ export const InfosWrapper = styled.div`
       a {
         color: var(--gray6);
         text-decoration: underline;
-        transition: all 0.25s;
+        transition: var(--link-speed);
+
         &:hover {
           color: var(--gray8);
         }
@@ -127,7 +128,7 @@ export const InfosWrapper = styled.div`
       border-radius: 2px;
       cursor: ${(props) => (props.submit ? 'not-allowed' : 'pointer')};
       pointer-events: ${(props) => props.submit && 'none'};
-      transition: all 0.25s;
+      transition: var(--link-speed);
 
       &:hover {
         color: var(--gray8);

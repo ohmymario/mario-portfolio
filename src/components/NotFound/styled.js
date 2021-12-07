@@ -54,7 +54,7 @@ export const NotFoundWrapper = styled.div`
 
   a {
     text-decoration: underline;
-    transition: color 0.2s;
+    transition: var(--link-speed);
     &:hover {
       color: var(--mainColor);
     }

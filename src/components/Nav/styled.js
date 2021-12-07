@@ -25,7 +25,7 @@ export const Wrapper = styled.nav`
         font-weight: 700;
         text-decoration: none;
         color: var(--bg-white);
-        transition: all 0.25s;
+        transition: var(--link-speed);
 
         &[aria-current] {
           color: var(--mainColor);

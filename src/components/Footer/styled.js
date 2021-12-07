@@ -17,6 +17,7 @@ export const FooterWrapper = styled.div`
     a {
       font-weight: normal;
       text-decoration: underline;
+      transition: var(--link-speed);
       &:hover {
         color: var(--gray1);
       }
@@ -29,6 +30,7 @@ export const FooterWrapper = styled.div`
     align-items: center;
     justify-content: center;
     a {
+      transition: var(--link-speed);
       &:hover {
         color: var(--gray4);
       }

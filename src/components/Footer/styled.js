@@ -32,7 +32,8 @@ export const FooterWrapper = styled.div`
     a {
       transition: var(--link-speed);
       &:hover {
-        color: var(--gray4);
+        transform: scale(1.05);
+        color: var(--mainColor);
       }
     }
     * {

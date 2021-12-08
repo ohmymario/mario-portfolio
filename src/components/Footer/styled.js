@@ -11,7 +11,7 @@ export const FooterWrapper = styled.div`
     justify-content: center;
     gap: 1.5vw;
     margin-bottom: 10px;
-    color: var(--gray4);
+    color: var(--gray3);
     font-size: 12px;
     letter-spacing: 0.2px;
     a {

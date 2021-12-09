@@ -27,7 +27,7 @@ export const InfosWrapper = styled.div`
     p {
       /* max-width: 560px; */
       font-size: 25px;
-      margin-bottom: 32px;
+      margin-bottom: 20px;
     }
   }
 

@@ -4,6 +4,7 @@ import Nav from '../Nav';
 import Footer from '../Footer';
 import BackgroundImage from '../BackgroundImage';
 import { Wrapper } from './styled';
+import MadeWithGatsby from '../MadeWithGatsby';
 
 import GlobalStyles from '../../styles/global';
 
@@ -15,6 +16,7 @@ const Layout = ({ children }) => (
         <Nav />
         {children}
         <Footer />
+        <MadeWithGatsby />
       </Wrapper>
     </BackgroundImage>
   </>

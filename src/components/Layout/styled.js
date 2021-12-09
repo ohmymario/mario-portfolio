@@ -10,6 +10,7 @@ export const Wrapper = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  position: relative;
 
   ${media.lessThan('large')`
         padding: 1.5em 0;

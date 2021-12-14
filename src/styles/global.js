@@ -19,6 +19,16 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: inherit;
   }
 
+  /* https://css-tricks.com/overriding-the-default-text-selection-color-with-css/ */
+  ::selection {
+    background: #7D7495; /* WebKit/Blink Browsers */
+  }
+  ::-moz-selection {
+    background: #7D7495; /* Gecko Browsers */
+  }
+
+
+
   body {
     line-height: 1;
     font-family: 'Roboto', sans-serif;

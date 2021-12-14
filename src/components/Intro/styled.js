@@ -72,6 +72,8 @@ export const IntroContainer = styled.div`
     line-height: 56px;
     margin-bottom: 12px;
     color: var(--gray8);
+    line-height: normal;
+
     b {
       color: var(--mainColor);
       display: block;
@@ -79,40 +81,42 @@ export const IntroContainer = styled.div`
   }
 
   h3 {
-    font-size: 14px;
+    font-size: 20px;
     letter-spacing: 1.5px;
     color: var(--gray7);
     font-weight: 700;
     margin-bottom: 32px;
-  }
-
-  p {
-    color: var(--gray7);
-    font-size: 22px;
-    line-height: 34px;
+    line-height: 1.4;
   }
 
   ${media.lessThan('large')`
-        padding: 36px;
-        h1{
-            font-size: 32px;
-            line-height: normal;
-        }
+    padding: 36px;
+    text-align:center;
+    max-width: 450px;
+    h1 {
+        font-size: 32px;
+    }
 
-        h3 {
-            margin-bottom: 18px;
-        }
+    h3 {
+        margin-bottom: 18px;
+        font-size: 24px;
+    }
 
     `}
 
-  ${media.lessThan('small')`
-        padding: 18px;
-        h1{
-            font-size: 28px;
-        }
+  ${media.lessThan('medium')`
+    h1{
 
-        p{
-            font-size: 18px;
-        }
+    }
+    h3 {
+      font-size: 17px;
+    }
+    `}
+
+  ${media.lessThan('small')`
+    padding: 18px;
+    h1{
+        font-size: 28px;
+    }
     `}
 `;

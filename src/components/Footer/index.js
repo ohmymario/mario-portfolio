@@ -30,7 +30,7 @@ const Footer = () => (
       </a>
       <a
         target="_blank"
-        href="https://www.linkedin.com/in/mario-b-062470173/"
+        href="https://www.linkedin.com/in/mariojballesteros/"
         rel="noreferrer"
       >
         <FontAwesomeIcon icon={faLinkedin} size="2x" />

@@ -96,7 +96,7 @@ const Contact = () => {
               <div className="contact-links">
                 <p className="contact-link">
                   You can connect with me via{' '}
-                  <a href="https://www.linkedin.com/in/mario-b-062470173/">
+                  <a href="https://www.linkedin.com/in/mariojballesteros/">
                     Linkedin.
                   </a>
                 </p>

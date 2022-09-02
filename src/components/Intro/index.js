@@ -15,7 +15,7 @@ const Intro = () => (
             Hello my name is
             <b className="header-name">Mario Ballesteros</b>
           </h1>
-          <h3>I am a self-taught web developer based in Fresno, CA.</h3>
+          <h3>I am a web developer based in Fresno, CA.</h3>
         </header>
       </IntroContainer>
     </Wrapper>

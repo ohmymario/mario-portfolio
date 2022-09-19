@@ -21,7 +21,7 @@ const portfolioData = [
   },
   {
     name: `React Netflix Clone`,
-    url: 'https://flixx-clone.netlify.app/',
+    url: 'https://firebase-netflix-clone.netlify.app/',
     tech: 'Firebase, React, FuseJS, React-Router',
   },
 ];

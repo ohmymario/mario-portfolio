@@ -10,6 +10,11 @@ const portfolioData = [
     tech: 'React, React-Router, Material-UI',
   },
   {
+    name: `Design Portfolio`,
+    url: 'https://amy-design-portfolio.netlify.app',
+    tech: 'TypeScript, React, Styled-Components, CSS Variables',
+  },
+  {
     name: `Slick's Slices`,
     url: 'https://slicks-slicess.netlify.app/',
     tech: 'Gatsby, Sanity, Styled-Components, GraphQL, CSS Variables',

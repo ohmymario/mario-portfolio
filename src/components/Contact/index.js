@@ -14,21 +14,35 @@ function encode(data) {
 }
 
 const Contact = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [subject, setSubject] = useState('');
-  const [message, setMessage] = useState('');
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: '',
+    bot: '',
+  });
   const [bot, setBot] = useState();
 
   const [submitMessage, setSubmitMessage] = useState('Send Message');
   const [submit, setSubmit] = useState(false);
 
   const resetForm = () => {
-    setName('');
-    setEmail('');
-    setSubject('');
-    setMessage('');
+    setFormData({
+      name: '',
+      email: '',
+      subject: '',
+      message: '',
+    });
+
     setBot();
+  };
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
   };
 
   const handleSubmit = (e) => {
@@ -36,10 +50,7 @@ const Contact = () => {
     const form = e.target;
     const body = encode({
       'form-name': form.getAttribute('name'),
-      name,
-      email,
-      subject,
-      message,
+      ...formData,
       bot,
     });
 
@@ -135,8 +146,8 @@ const Contact = () => {
                     {/* Your Name:{' '} */}
                     <input
                       placeholder="Name"
-                      onChange={(e) => setName(e.target.value)}
-                      value={name}
+                      onChange={handleChange}
+                      value={formData.name}
                       name="name"
                       type="text"
                       required
@@ -149,8 +160,8 @@ const Contact = () => {
                     {/* Your Email:{' '} */}
                     <input
                       placeholder="Email"
-                      onChange={(e) => setEmail(e.target.value)}
-                      value={email}
+                      onChange={handleChange}
+                      value={formData.email}
                       name="email"
                       type="email"
                     />
@@ -162,8 +173,8 @@ const Contact = () => {
                     {/* Subject:{' '} */}
                     <input
                       placeholder="Subject"
-                      onChange={(e) => setSubject(e.target.value)}
-                      value={subject}
+                      onChange={handleChange}
+                      value={formData.subject}
                       name="subject"
                       required
                     />
@@ -175,8 +186,8 @@ const Contact = () => {
                     {/* Message:{' '} */}
                     <textarea
                       placeholder="Message"
-                      onChange={(e) => setMessage(e.target.value)}
-                      value={message}
+                      onChange={handleChange}
+                      value={formData.message}
                       name="message"
                       required
                     />

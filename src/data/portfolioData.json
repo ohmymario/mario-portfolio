@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Coffeeroasters",
+    "url": "https://coffee-roasters.vercel.app/",
+    "tech": "NextJS, React, Styled-Components",
+    "slug": "coffee-roasters"
+  },
+  {
+    "name": "React Colors",
+    "url": "https://laughing-boyd-cdf70d.netlify.app/",
+    "tech": "React, React-Router, Material-UI",
+    "slug": "react-colors"
+  },
+  {
+    "name": "Design Portfolio",
+    "url": "https://amy-design-portfolio.netlify.app",
+    "tech": "TypeScript, React, Styled-Components, CSS Variables",
+    "slug": "design-portfolio"
+  },
+  {
+    "name": "Slick's Slices",
+    "url": "https://slicks-slicess.netlify.app/",
+    "tech": "Gatsby, Sanity, Styled-Components, GraphQL, CSS Variables",
+    "slug": "slicks-slices"
+  },
+  {
+    "name": "Weatherman",
+    "url": "https://weatherman-demo.netlify.app/",
+    "tech": "OpenWeatherMap API, React, Font-Awesome, Styled-Components",
+    "slug": "weatherman"
+  }
+]

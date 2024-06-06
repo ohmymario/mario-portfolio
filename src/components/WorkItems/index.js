@@ -1,5 +1,5 @@
 import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
+import { useStaticQuery, graphql, Link } from 'gatsby';
 
 import portfolioData from './worksData';
 import { WorkItem, WorkImage } from './styled';
@@ -39,14 +39,10 @@ const WorkItems = () => {
 
         return (
           <div className="work-container" key={index}>
-            <a
-              href={work.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="work-link"
-            >
+            <Link to={`/projects/${work.slug}`} className="work-link">
               <WorkImage fluid={image.node.childImageSharp.fluid} />
-            </a>
+            </Link>
+
             <div className="work-desc">
               <h3>{work.name}</h3>
               <p>{work.tech}</p>

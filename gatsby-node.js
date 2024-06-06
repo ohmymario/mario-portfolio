@@ -1,7 +1,27 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
+const path = require('path');
+const fs = require('fs').promises;
 
-// You can delete this file if you're not using it
+exports.createPages = async ({ actions }) => {
+  const { createPage } = actions;
+  const projectTemplate = path.resolve('src/templates/project.js');
+
+  try {
+    const data = await fs.readFile('./src/data/portfolioData.json', 'utf8');
+    const portfolioData = JSON.parse(data);
+
+    portfolioData.forEach((project) => {
+      createPage({
+        path: `/projects/${project.slug}`,
+        component: projectTemplate,
+        context: {
+          slug: project.slug,
+          name: project.name,
+          tech: project.tech,
+          url: project.url,
+        },
+      });
+    });
+  } catch (error) {
+    console.error('Error loading portfolio data:', error);
+  }
+};

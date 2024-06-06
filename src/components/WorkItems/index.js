@@ -2,7 +2,6 @@ import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 
 import portfolioData from './worksData';
-
 import { WorkItem, WorkImage } from './styled';
 
 const WorkItems = () => {
@@ -12,11 +11,11 @@ const WorkItems = () => {
         edges {
           node {
             childImageSharp {
-              id
-              fluid(maxWidth: 500, quality: 100) {
+              fluid(maxWidth: 500, quality: 75) {
                 ...GatsbyImageSharpFluid
               }
             }
+            name
           }
         }
       }
@@ -25,31 +24,32 @@ const WorkItems = () => {
 
   const pics = data.allFile.edges;
 
+  const findImage = (imageName) => {
+    const imageParsed = imageName.split('.')[0];
+    const image = pics.find((pic) => pic.node.name === imageParsed);
+
+    if (!image) return null;
+    return image;
+  };
+
   return (
     <WorkItem>
-      {pics.map((image, i) => {
-        const regex = /[^/]*$/g;
-        const num = image.node.childImageSharp.fluid.src
-          .match(regex)[0]
-          .match(/\d/g, '')[0];
+      {portfolioData.map((work, index) => {
+        const image = findImage(work.image, work);
 
         return (
-          <div className="work-container">
+          <div className="work-container" key={index}>
             <a
-              href={portfolioData[num - 1].url}
+              href={work.url}
               target="_blank"
               rel="noopener noreferrer"
               className="work-link"
-              key={i}
             >
-              <WorkImage
-                imgStyle={{ objectPosition: 'top' }}
-                fluid={image.node.childImageSharp.fluid}
-              />
+              <WorkImage fluid={image.node.childImageSharp.fluid} />
             </a>
             <div className="work-desc">
-              <h3>{portfolioData[num - 1].name}</h3>
-              <p>{portfolioData[num - 1].tech}</p>
+              <h3>{work.name}</h3>
+              <p>{work.tech}</p>
             </div>
           </div>
         );

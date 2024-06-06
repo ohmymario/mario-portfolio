@@ -15,11 +15,11 @@ export const WorkItem = styled.div`
     position: relative;
 
     ${media.lessThan('large')`
-        width: calc(50% - 10px);
-      `}
+      width: calc(50% - 10px);
+    `}
 
     ${media.lessThan('medium')`
-        width: 100%;
+      width: 100%;
     `}
 
     a {
@@ -29,14 +29,14 @@ export const WorkItem = styled.div`
       display: block;
       overflow: hidden;
       &:after {
-        position: absolute;
         content: '';
-        background: rgba(0, 0, 0, 0.75);
-        z-index: 999;
+        position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
+        background: rgba(0, 0, 0, 0.75);
+        z-index: 999;
         opacity: 0;
         transition: all 0.35s;
       }
@@ -50,30 +50,26 @@ export const WorkItem = styled.div`
       position: absolute;
       top: 0;
       left: 0;
-      right: 0;
-      bottom: 0;
+      width: 100%;
+      height: 100%;
+      padding: 15px;
       opacity: 0;
       z-index: 999;
-      padding: 15px 15px 15px 15px;
-      transition: all 0.35s;
       pointer-events: none;
       color: white;
+      transition: all 0.35s;
 
       h3 {
+        margin: 0;
         text-align: center;
         letter-spacing: 0.5px;
         font-weight: normal;
         font-size: 1.5rem;
-        justify-content: center;
       }
 
-      p {
-        font-size: 0.85rem;
-      }
-
-      h3,
       p {
         margin: 0;
+        font-size: 0.85rem;
         text-align: center;
         color: white;
       }
@@ -85,7 +81,7 @@ export const WorkItem = styled.div`
 
     &:hover a:after {
       opacity: 1;
-      background-image: linear-gradient(rgba(0, 0, 0, 0.75));
+      background: rgba(0, 0, 0, 0.75);
     }
 
     &:hover img {
@@ -95,6 +91,7 @@ export const WorkItem = styled.div`
 `;
 
 export const WorkImage = styled(Img)`
+  object-position: top;
   height: 100%;
   width: 100%;
 `;

@@ -14,10 +14,11 @@ exports.createPages = async ({ actions }) => {
         path: `/projects/${project.slug}`,
         component: projectTemplate,
         context: {
-          slug: project.slug,
           name: project.name,
-          tech: project.tech,
+          slug: project.slug,
           url: project.url,
+          tech: project.tech,
+          image: `works/${project.image}`, // Pass the complete relative path
         },
       });
     });

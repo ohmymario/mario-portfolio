@@ -13,7 +13,7 @@ const Nav = () => (
         return (
           <li key={i}>
             {' '}
-            <AniLink paintDrip to={link.url} hex="#5A67D8">
+            <AniLink paintDrip to={link.url} hex="#5A67D8" duration={0.5}>
               {' '}
               <Icon /> {link.label}{' '}
             </AniLink>{' '}

@@ -4,6 +4,8 @@ import { useStaticQuery, graphql, Link } from 'gatsby';
 import portfolioData from './worksData';
 import { WorkItem, WorkImage } from './styled';
 
+import AniLink from 'gatsby-plugin-transition-link/AniLink';
+
 const WorkItems = () => {
   const data = useStaticQuery(graphql`
     {
@@ -39,9 +41,15 @@ const WorkItems = () => {
 
         return (
           <div className="work-container" key={index}>
-            <Link to={`/projects/${work.slug}`} className="work-link">
+            <AniLink
+              paintDrip
+              to={`/projects/${work.slug}`}
+              hex="#5A67D8"
+              className="work-link"
+              duration={0.5}
+            >
               <WorkImage fluid={image.node.childImageSharp.fluid} />
-            </Link>
+            </AniLink>
 
             <div className="work-desc">
               <h3>{work.name}</h3>

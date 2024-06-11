@@ -15,10 +15,11 @@ exports.createPages = async ({ actions }) => {
         component: projectTemplate,
         context: {
           name: project.name,
-          slug: project.slug,
-          url: project.url,
+          project_url: project.project_url,
+          github_url: project.github_url,
           tech: project.tech,
           image: `works/${project.image}`, // Pass the complete relative path
+          slug: project.slug,
         },
       });
     });

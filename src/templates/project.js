@@ -62,7 +62,7 @@ const ProjectInfo = styled.div`
 `;
 
 const ProjectTemplate = ({ data, pageContext }) => {
-  const { name, tech, url } = pageContext;
+  const { name, project_url, github_url, tech } = pageContext;
 
   return (
     <Layout>
@@ -73,8 +73,13 @@ const ProjectTemplate = ({ data, pageContext }) => {
         <ProjectInfo>
           <h1>{name}</h1>
           <p>{tech}</p>
-          <a href={url} target="_blank" rel="noopener noreferrer">
+
+          <a href={project_url} target="_blank" rel="noopener noreferrer">
             View Project
+          </a>
+
+          <a href={github_url} target="_blank" rel="noopener noreferrer">
+            View Github
           </a>
         </ProjectInfo>
       </Wrapper>

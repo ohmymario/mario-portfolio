@@ -3,7 +3,7 @@
     "name": "coffeeroasters",
     "slug": "coffee-roasters",
     "project_url": "https://coffee-roasters.vercel.app/",
-    "github_url": "github",
+    "github_url": "https://github.com/ohmymario/coffee-roasters",
     "tech": "NextJS, React, Styled-Components",
     "image": "coffee-roasters.png"
   },
@@ -11,8 +11,7 @@
     "name": "React Colors",
     "slug": "react-colors",
     "project_url": "https://laughing-boyd-cdf70d.netlify.app/",
-    "github_url": "github",
-
+    "github_url": "https://github.com/ohmymario/Color-Palette",
     "tech": "React, React-Router, Material-UI",
     "image": "react-colors.png"
   },
@@ -20,7 +19,7 @@
     "name": "Design Portfolio",
     "slug": "design-portfolio",
     "project_url": "https://amy-design-portfolio.netlify.app",
-    "github_url": "github",
+    "github_url": "https://github.com/ohmymario/design-portfolio",
     "tech": "TypeScript, React, Styled-Components, CSS Variables",
     "image": "design-portfolio.png"
   },
@@ -28,7 +27,7 @@
     "name": "Slick's Slices",
     "slug": "slicks-slices",
     "project_url": "https://slicks-slicess.netlify.app/",
-    "github_url": "github",
+    "github_url": "https://github.com/ohmymario/pizza-site",
     "tech": "Gatsby, Sanity, Styled-Components, GraphQL, CSS Variables",
     "image": "slick-slices.png"
   },
@@ -36,7 +35,7 @@
     "name": "Weatherman",
     "slug": "weatherman",
     "project_url": "https://weatherman-demo.netlify.app/",
-    "github_url": "github",
+    "github_url": "https://github.com/ohmymario/weatherman",
     "tech": "OpenWeatherMap API, React, Font-Awesome, Styled-Components",
     "image": "weatherman.png"
   },
@@ -44,7 +43,7 @@
     "name": "React Netflix Clone",
     "slug": "react-netflix-clone",
     "project_url": "https://firebase-netflix-clone.netlify.app/",
-    "github_url": "github",
+    "github_url": "https://github.com/ohmymario/netflix-clone",
     "tech": "Firebase, React, FuseJS, React-Router",
     "image": "netflix-clone.jpg"
   }

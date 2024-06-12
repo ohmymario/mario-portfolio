@@ -61,6 +61,12 @@ const ProjectInfo = styled.div`
   }
 `;
 
+const ProjectLinks = styled.div`
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+`;
+
 const ProjectTemplate = ({ data, pageContext }) => {
   const { name, project_url, github_url, tech } = pageContext;
 
@@ -74,13 +80,15 @@ const ProjectTemplate = ({ data, pageContext }) => {
           <h1>{name}</h1>
           <p>{tech}</p>
 
-          <a href={project_url} target="_blank" rel="noopener noreferrer">
-            View Project
-          </a>
+          <ProjectLinks>
+            <a href={project_url} target="_blank" rel="noopener noreferrer">
+              View Project
+            </a>
 
-          <a href={github_url} target="_blank" rel="noopener noreferrer">
-            View Github
-          </a>
+            <a href={github_url} target="_blank" rel="noopener noreferrer">
+              View Github
+            </a>
+          </ProjectLinks>
         </ProjectInfo>
       </Wrapper>
     </Layout>

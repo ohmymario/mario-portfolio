@@ -16,7 +16,6 @@ const Contact = () => {
     email: '',
     subject: '',
     message: '',
-    bot: '',
   });
   const [bot, setBot] = useState();
 
@@ -42,6 +41,13 @@ const Contact = () => {
     }));
   };
 
+  const undoSubmitMessage = () => {
+    setTimeout(function () {
+      setSubmit(false);
+      setSubmitMessage('Send Message');
+    }, 2500);
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -57,31 +63,21 @@ const Contact = () => {
       body,
     })
       .then((res) => {
-        setSubmit(true);
         if (res.status === 200) {
+          setSubmit(true);
           setSubmitMessage('Message Sent ✉');
+          undoSubmitMessage();
+          resetForm();
         } else {
-          setSubmitMessage('Something went wrong');
           throw new Error('Something went wrong');
         }
-
-        setTimeout(function () {
-          setSubmitMessage('Send Message');
-          setSubmit(false);
-        }, 2500);
-
-        resetForm();
       })
-      .catch((error) => {
-        alert(error);
-        setTimeout(function () {
-          setSubmitMessage('Send Message');
-          setSubmit(false);
-        }, 2000);
+      .catch((err) => {
+        setSubmit(false);
+        setSubmitMessage('Error Sending Message 🚫');
+        undoSubmitMessage();
       });
   };
-
-  // .then(() => navigate(form.getAttribute('action')))
 
   return (
     <>

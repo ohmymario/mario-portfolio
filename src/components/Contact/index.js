@@ -7,11 +7,8 @@ import ContactImage from '../../images/contact/contact.png';
 
 import { ContactWrapper, ImageWrapper, InfosWrapper } from './styled';
 
-function encode(data) {
-  return Object.keys(data)
-    .map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
-    .join('&');
-}
+// Helpers
+import { encode } from './contactHelpers';
 
 const Contact = () => {
   const [formData, setFormData] = useState({

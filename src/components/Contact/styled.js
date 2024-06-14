@@ -53,7 +53,8 @@ export const InfosWrapper = styled.div`
     flex-wrap: wrap;
     gap: 20px;
 
-    opacity: ${(props) => props.submit && '0.45'};
+    opacity: ${(props) => props.submitStatus && '0.45'};
+    pointer-events: ${(props) => props.submitStatus && 'none'};
 
     ${media.lessThan('medium')`
       margin-bottom: 20px;
@@ -76,11 +77,13 @@ export const InfosWrapper = styled.div`
       border-radius: 2px;
       background: var(--gray3);
       transition: all 0.3s ease;
+      cursor: ${(props) => props.submitStatus && 'not-allowed'};
 
       &:focus {
         border-color: var(--mainColor);
         outline: 0;
-        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08),
+        box-shadow:
+          inset 0 1px 1px rgba(0, 0, 0, 0.08),
           0 0 8px rgba(var(--mainColorValue), 0.6);
       }
 
@@ -126,8 +129,8 @@ export const InfosWrapper = styled.div`
       background: var(--gray3);
       border: 1px solid var(--gray4);
       border-radius: 2px;
-      cursor: ${(props) => (props.submit ? 'not-allowed' : 'pointer')};
-      pointer-events: ${(props) => props.submit && 'none'};
+      cursor: pointer;
+      cursor: ${(props) => props.submitStatus && 'not-allowed'};
       transition: var(--link-speed);
 
       &:hover {

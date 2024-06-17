@@ -5,6 +5,7 @@ export const ContactWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 20px;
 
   ${media.lessThan('medium')`
         flex-wrap: wrap;
@@ -155,6 +156,7 @@ export const ImageWrapper = styled.div`
   padding: 18px;
   margin: 0 auto;
 
+  .gatsby-image-wrapper,
   img {
     width: 250px;
 

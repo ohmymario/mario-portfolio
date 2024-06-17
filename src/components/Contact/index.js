@@ -3,11 +3,12 @@ import React, { useState } from 'react';
 import Content from '../Common/Content';
 import Wrapper from '../Common/Wrapper';
 
-import ContactImage from '../../images/contact/contact.png';
+import Img from 'gatsby-image';
 
 import { ContactWrapper, ImageWrapper, InfosWrapper } from './styled';
 
 // Helpers
+import { graphql, useStaticQuery } from 'gatsby';
 import { encode } from './contactHelpers';
 
 const Contact = () => {
@@ -132,7 +133,6 @@ const Contact = () => {
 
                 <p className="form-name">
                   <label htmlFor="name">
-                    {/* Your Name:{' '} */}
                     <input
                       placeholder="Name"
                       onChange={handleChange}
@@ -146,7 +146,6 @@ const Contact = () => {
 
                 <p className="form-email">
                   <label htmlFor="email">
-                    {/* Your Email:{' '} */}
                     <input
                       placeholder="Email"
                       onChange={handleChange}
@@ -159,7 +158,6 @@ const Contact = () => {
 
                 <p className="form-subject">
                   <label htmlFor="subject">
-                    {/* Subject:{' '} */}
                     <input
                       placeholder="Subject"
                       onChange={handleChange}
@@ -172,7 +170,6 @@ const Contact = () => {
 
                 <p className="form-message">
                   <label htmlFor="message">
-                    {/* Message:{' '} */}
                     <textarea
                       placeholder="Message"
                       onChange={handleChange}
@@ -189,7 +186,7 @@ const Contact = () => {
               </form>
             </InfosWrapper>
             <ImageWrapper>
-              <img src={ContactImage} alt="" />
+              <Image />
             </ImageWrapper>
           </ContactWrapper>
         </Content>
@@ -199,3 +196,18 @@ const Contact = () => {
 };
 
 export default Contact;
+
+const Image = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      placeholderImage: file(relativePath: { eq: "contact/contact.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 250, quality: 100) {
+            ...GatsbyImageSharpFluid_noBase64
+          }
+        }
+      }
+    }
+  `);
+  return <Img fluid={data.placeholderImage.childImageSharp.fluid} />;
+};

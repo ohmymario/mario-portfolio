@@ -13,6 +13,6 @@ export const Wrapper = styled.div`
   position: relative;
 
   ${media.lessThan('large')`
-        padding: 1.5em 0;
+        padding: 1.5em 30px;
     `}
 `;

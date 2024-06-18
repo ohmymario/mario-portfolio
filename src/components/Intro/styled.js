@@ -3,24 +3,13 @@ import media from 'styled-media-query';
 
 export const Wrapper = styled.section`
   background: #fff;
-  width: auto;
   display: flex;
-  width: 1000px;
+  width: 1200px;
   flex-direction: row;
   align-items: center;
 
   ${media.lessThan('large')`
-        width: calc(100% - 300px);
-        flex-direction: column;
-    `}
-
-  ${media.lessThan('medium')`
-        width: calc(100% - 150px);
-        flex-direction: column;
-    `}
-
-    ${media.lessThan('small')`
-        width: calc(100% - 50px);
+        width: 100%;
         flex-direction: column;
     `}
 `;
@@ -105,9 +94,6 @@ export const IntroContainer = styled.div`
     `}
 
   ${media.lessThan('medium')`
-    h1{
-
-    }
     h3 {
       font-size: 17px;
     }
